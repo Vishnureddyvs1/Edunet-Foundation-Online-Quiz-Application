@@ -1,73 +1,114 @@
-# Welcome to your Lovable project
+# Edunet Foundation — Online Quiz Application
 
-## Project info
+**Project overview**  
+This is a lightweight, mobile-friendly Online Quiz Application built as a small but polished submission for my internship. It’s designed for students and educators to practice and test knowledge with multiple-choice questions, timers, instant feedback and a local leaderboard. The UI is simple, responsive and visually appealing so it stands out without being heavyweight.
 
-**URL**: https://lovable.dev/projects/9b8c45f2-796e-4c12-b77f-bb2bb5b602d7
+**Presented by**  
+- **Student:** Vishnu Vardhan Reddy Dumpa  
+- **College:** Parul University  
+- **Department:** CSE — Cyber Security  
+- **Email:** vishnureddyvs1@gmail.com  
+- **AICTE Student ID:** STU6565b6fbca7aa1701164795
 
-## How can I edit this code?
+## Features
+- Single-page quiz experience with one question at a time.  
+- Per-question timer and immediate feedback (correct / incorrect).  
+- Progress bar and smooth transitions between questions.  
+- Final score summary with percentage and encouraging message.  
+- Local leaderboard using `localStorage` (keeps recent scores).  
+- Responsive layout — works well on phones and desktops.  
+- Clean, well-commented code split into `index.html`, `style.css` and `script.js` (or a React + Vite setup if you prefer).
 
-There are several ways of editing your application.
+## Tech stack
+A small, focused stack so the app is easy to run and submit:
+- HTML, CSS, JavaScript (vanilla) — or TypeScript + React / Vite (project files include a modern setup).  
+- Optional: Tailwind CSS for quick styling (config included).  
+- Local JSON question store, `localStorage` for leaderboard.
 
-**Use Lovable**
+## How to run ( HTML/CSS/JS)
+1. Clone the repo or copy the project folder to your machine.  
+2. Open `index.html` in your browser (double-click or serve with a simple HTTP server).  
+3. Start a quiz and follow on-screen instructions.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9b8c45f2-796e-4c12-b77f-bb2bb5b602d7) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
-```
+# open http://localhost:5173 (or the port Vite shows)
 
-**Edit a file directly in GitHub**
+.
+├─ index.html
+├─ style.css
+├─ script.js
+├─ data/
+│  └─ questions.json
+├─ public/ (icons, favicon)
+└─ README.md 
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+If using the included React + Vite setup, the src/ folder contains components and styles.
+Notes on design decisions
+Kept the UI minimal so the app is lightweight and loads fast.
+Timer logic and scoring are intentionally simple and deterministic so testing is straightforward.
+Leaderboard is local to avoid extra backend work for the submission — easy to extend to a server if required.
 
-**Use GitHub Codespaces**
+How I tested it
+Manual tests on desktop and mobile (Chrome/Firefox).
+Verified timer behaviour, score calculation and local leaderboard persistence.
+Ensured keyboard accessibility for basic actions.
+Future improvements (optional)
+Real-time multiplayer quizzes using Socket.IO or Firebase.
+CSV/JSON import for educators and IndexedDB support for larger question banks.
+Exportable results and simple analytics dashboard.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Licence
+This project is submitted as part of an internship requirement. You are free to view and run the code for evaluation. If you reuse it, please credit the author.
 
-## What technologies are used for this project?
+Contact
+**If you need any clarifications or want to see additional features, email me: vishnureddyvs1@gmail.com**
+**Good luck with the submission — I built this to be small, reliable and visually neat so it makes a good impression**
 
-This project is built with:
+### .gitignore
+```gitignore
+# Node & npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+bun.lockb
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Vite / build output
+dist/
+build/
+.vite/
 
-## How can I deploy this project?
+# TypeScript
+*.tsbuildinfo
+*.d.ts
+tsconfig.tsbuildinfo
 
-Simply open [Lovable](https://lovable.dev/projects/9b8c45f2-796e-4c12-b77f-bb2bb5b602d7) and click on Share -> Publish.
+# Logs
+logs/
+*.log
 
-## Can I connect a custom domain to my Lovable project?
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
 
-Yes, you can!
+# Mac / Windows
+.DS_Store
+Thumbs.db
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Local environment files
+.env
+.env.local
+.env.*.local
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Test / coverage
+coverage/
+*.lcov
+
+# Misc
+public/favicon.ico
+public/placeholder.svg
