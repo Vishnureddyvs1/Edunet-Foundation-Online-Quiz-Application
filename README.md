@@ -57,11 +57,9 @@ Email: vishnureddyvs1@gmail.com
 
 ### Landing Page  
 <img width="1246" height="805" alt="Screenshot 2025-09-27 210942" src="https://github.com/user-attachments/assets/f0fd4edc-d3b8-4020-8f2f-2bf4c6386b5b" />
-
-### Quiz Page  
+ 
 <img width="1640" height="686" alt="Screenshot 2025-09-27 211026" src="https://github.com/user-attachments/assets/fa9fe011-a227-41fd-a617-9e1d32828467" />
 
-### Score Page  
 <img width="1499" height="481" alt="Screenshot 2025-09-27 211047" src="https://github.com/user-attachments/assets/6a694c65-5e2f-4515-aebd-090231773156" />
 
 <img width="1191" height="839" alt="Screenshot 2025-09-27 211114" src="https://github.com/user-attachments/assets/7d26a480-09d2-4735-bf55-fa8aae3f60fd" />
