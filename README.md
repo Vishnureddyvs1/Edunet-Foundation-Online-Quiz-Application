@@ -32,8 +32,6 @@ A small, focused stack so the app is easy to run and submit:
 
 npm install
 npm run dev
-# open http://localhost:5173 (or the port Vite shows)
-
 .
 ├─ index.html
 ├─ style.css
