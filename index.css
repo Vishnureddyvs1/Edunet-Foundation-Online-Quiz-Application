@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Edunet Foundation Quiz App Design System
+Educational blue/green theme with modern typography and smooth animations.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Educational Blue/Green Theme */
+    --background: 210 100% 97%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Primary - Educational Blue */
+    --primary: 210 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 85%;
+    --primary-dark: 210 85% 35%;
+
+    /* Secondary - Learning Green */
+    --secondary: 150 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 150 60% 85%;
+    --secondary-dark: 150 60% 40%;
+
+    /* Success/Correct - Bright Green */
+    --success: 120 70% 50%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 120 70% 95%;
+
+    /* Error/Wrong - Warm Red */
+    --error: 0 70% 55%;
+    --error-foreground: 0 0% 100%;
+    --error-light: 0 70% 95%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 15% 50%;
+
+    --accent: 190 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 88%;
+    --input: 210 30% 94%;
+    --ring: 210 85% 45%;
+
+    --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--secondary)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--primary-light)) 100%);
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 4px 20px hsl(var(--primary) / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 210 40% 98%;
+    --card: 220 20% 10%;
+    --card-foreground: 210 40% 98%;
+    --primary: 210 85% 55%;
+    --secondary: 150 60% 45%;
+    --success: 120 70% 45%;
+    --error: 0 70% 50%;
+    --border: 220 20% 15%;
+    --input: 220 20% 15%;
+    --ring: 210 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* Custom Quiz Animations */
+  .quiz-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+  
+  .quiz-slide-in {
+    animation: slide-in-up 0.4s ease-out;
+  }
+  
+  .quiz-bounce {
+    animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .progress-fill {
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .timer-pulse {
+    animation: pulse 1s infinite;
+  }
+}
+
+@layer components {
+  /* Quiz-specific component styles */
+  .quiz-option {
+    @apply transition-all duration-200 hover:scale-105 hover:shadow-md cursor-pointer;
+  }
+  
+  .quiz-option.correct {
+    @apply bg-success/10 border-success text-success-foreground;
+  }
+  
+  .quiz-option.incorrect {
+    @apply bg-error/10 border-error text-error-foreground;
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
