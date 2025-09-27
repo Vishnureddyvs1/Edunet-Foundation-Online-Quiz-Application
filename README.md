@@ -2,6 +2,7 @@
 
 **Project overview**  
 This is a lightweight, mobile-friendly Online Quiz Application built as a small but polished submission for my internship. It’s designed for students and educators to practice and test knowledge with multiple-choice questions, timers, instant feedback and a local leaderboard. The UI is simple, responsive and visually appealing so it stands out without being heavyweight.
+**WEBSITE**: https://tiny-swan-5b2662.netlify.app/
 
 **Presented by**  
 - **Student:** Vishnu Vardhan Reddy Dumpa  
@@ -9,6 +10,7 @@ This is a lightweight, mobile-friendly Online Quiz Application built as a small 
 - **Department:** CSE — Cyber Security  
 - **Email:** vishnureddyvs1@gmail.com  
 - **AICTE Student ID:** STU6565b6fbca7aa1701164795
+  
 
 ## Features
 - Single-page quiz experience with one question at a time.  
