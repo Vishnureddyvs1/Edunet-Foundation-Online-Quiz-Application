@@ -25,88 +25,44 @@ A small, focused stack so the app is easy to run and submit:
 - Optional: Tailwind CSS for quick styling (config included).  
 - Local JSON question store, `localStorage` for leaderboard.
 
-## How to run ( HTML/CSS/JS)
-1. Clone the repo or copy the project folder to your machine.  
-2. Open `index.html` in your browser (double-click or serve with a simple HTTP server).  
-3. Start a quiz and follow on-screen instructions.
+**📂 Project Structure**
+├── index.html
+├── style.css / App.css
+├── script.js / App.tsx
+├── public/
+│   ├── favicon.ico
+│   └── placeholder.svg
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── utils/
+└── README.md
 
-npm install
-npm run dev
-.
-├─ index.html
-├─ style.css
-├─ script.js
-├─ data/
-│  └─ questions.json
-├─ public/ (icons, favicon)
-└─ README.md 
+**💡 Why This Project Stands Out**
+I didn’t want a boring “just works” quiz. I wanted it to feel modern and engaging.
+Small touches like animations, a progress bar, and instant feedback make it fun.
+The code is lightweight but still structured so anyone can read and extend it.
 
-If using the included React + Vite setup, the src/ folder contains components and styles.
-Notes on design decisions
-Kept the UI minimal so the app is lightweight and loads fast.
-Timer logic and scoring are intentionally simple and deterministic so testing is straightforward.
-Leaderboard is local to avoid extra backend work for the submission — easy to extend to a server if required.
+**🔮 Future Improvements**
+Real-time multiplayer quizzes (host + participants)
+Import/export question sets (CSV/JSON)
+Analytics dashboard for educators
+Offline mode with service worker
 
-How I tested it
-Manual tests on desktop and mobile (Chrome/Firefox).
-Verified timer behaviour, score calculation and local leaderboard persistence.
-Ensured keyboard accessibility for basic actions.
-Future improvements (optional)
-Real-time multiplayer quizzes using Socket.IO or Firebase.
-CSV/JSON import for educators and IndexedDB support for larger question banks.
-Exportable results and simple analytics dashboard.
+**📬 Contact**
+If you’d like to explore this project or suggest improvements, feel free to reach out:
+Email: vishnureddyvs1@gmail.com
 
-Licence
-This project is submitted as part of an internship requirement. You are free to view and run the code for evaluation. If you reuse it, please credit the author.
+## 📸 Screenshots
 
-Contact
-**If you need any clarifications or want to see additional features, email me: vishnureddyvs1@gmail.com**
-**Good luck with the submission — I built this to be small, reliable and visually neat so it makes a good impression**
+### Landing Page  
+<img width="1246" height="805" alt="Screenshot 2025-09-27 210942" src="https://github.com/user-attachments/assets/f0fd4edc-d3b8-4020-8f2f-2bf4c6386b5b" />
 
-### .gitignore
-```gitignore
-# Node & npm
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-pnpm-lock.yaml
-bun.lockb
+### Quiz Page  
+<img width="1640" height="686" alt="Screenshot 2025-09-27 211026" src="https://github.com/user-attachments/assets/fa9fe011-a227-41fd-a617-9e1d32828467" />
 
-# Vite / build output
-dist/
-build/
-.vite/
+### Score Page  
+<img width="1499" height="481" alt="Screenshot 2025-09-27 211047" src="https://github.com/user-attachments/assets/6a694c65-5e2f-4515-aebd-090231773156" />
 
-# TypeScript
-*.tsbuildinfo
-*.d.ts
-tsconfig.tsbuildinfo
+<img width="1191" height="839" alt="Screenshot 2025-09-27 211114" src="https://github.com/user-attachments/assets/7d26a480-09d2-4735-bf55-fa8aae3f60fd" />
 
-# Logs
-logs/
-*.log
-
-# IDEs and editors
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-# Mac / Windows
-.DS_Store
-Thumbs.db
-
-# Local environment files
-.env
-.env.local
-.env.*.local
-
-# Test / coverage
-coverage/
-*.lcov
-
-# Misc
-public/favicon.ico
-public/placeholder.svg
